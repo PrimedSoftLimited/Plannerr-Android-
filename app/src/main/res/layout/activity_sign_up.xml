@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     xmlns:squint="http://schemas.android.com/apk/res-auto"
     tools:context=".SignUpActivity">
 
@@ -12,13 +11,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:diagonal_angle="10"
+            app:diagonal_position="bottom"
+            app:diagonal_direction="right"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/solid_background"/>
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
         <ProgressBar
             android:id="@+id/signup_progressbar"
             style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:elevation="8dp"
+            android:elevation="10dp"
             android:indeterminate="true"
             android:indeterminateDrawable="@drawable/progressbar"
             android:visibility="gone" />
@@ -27,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:elevation="8dp"
             android:padding="16dp">
 
             <TextView
@@ -35,6 +50,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:text="@string/app_name_capital"
+                android:textColor="@color/white"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -43,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
+                android:textColor="@color/white"
                 android:text="@string/signup_writeup"
                 android:textSize="24sp" />
 

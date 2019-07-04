@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         to_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(buttonState % 2 == 0){
-                    to_signup.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                }
-                else{
-                    to_signup.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                }
-                buttonState++;
+//                if(buttonState % 2 == 0){
+//                    to_signup.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+//                }
+//                else{
+//                    to_signup.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+//                }
+//                buttonState++;
                 Intent toSignup = new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(toSignup);
             }

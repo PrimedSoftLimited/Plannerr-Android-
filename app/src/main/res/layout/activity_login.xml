@@ -5,11 +5,22 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity">
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:diagonal_angle="10"
+        app:diagonal_position="bottom"
+        app:diagonal_direction="right"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/solid_background"/>
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
 
     <ProgressBar
         android:id="@+id/loading"
@@ -17,24 +28,23 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
+        android:elevation="10dp"
         android:visibility="gone" />
-
-    <com.example.plannerr.view.CustomView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:elevation="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name_capital"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:textSize="36sp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="55dp"
             android:textStyle="bold" />
 
         <TextView
@@ -42,6 +52,7 @@
             android:layout_height="wrap_content"
             android:text="@string/signin_writeup"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_marginTop="30dp" />
 
@@ -49,7 +60,7 @@
             android:id="@+id/email_signin_textLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="100dp">
 
             <EditText
                 android:id="@+id/email"
@@ -82,6 +93,7 @@
                 android:hint="@string/prompt_password"
                 android:imeActionLabel="@string/action_sign_in_short"
                 android:imeOptions="actionDone"
+                android:drawableRight="@drawable/ic_visibility_black_24dp"
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
                 android:importantForAutofill="no"

@@ -7,6 +7,7 @@ public class Data {
     User UserObject;
     private String image_link;
     private String email_link;
+    private String token;
 
 
     // Getter Methods
@@ -31,6 +32,10 @@ public class Data {
         return email_link;
     }
 
+    public String getToken() {
+        return token;
+    }
+
     // Setter Methods
 
     public void setSuccess(boolean success) {
@@ -51,5 +56,9 @@ public class Data {
 
     public void setEmail_link(String email_link) {
         this.email_link = email_link;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
