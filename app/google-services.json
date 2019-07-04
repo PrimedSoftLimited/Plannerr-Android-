@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874178996650",
+    "firebase_url": "https://plannerr-e9bc7.firebaseio.com",
+    "project_id": "plannerr-e9bc7",
+    "storage_bucket": "plannerr-e9bc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874178996650:android:5945ee56f2ffb3ad",
+        "android_client_info": {
+          "package_name": "com.example.plannerr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874178996650-kd0btotajr1bmodvfb6mpgrpad9sdnop.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plannerr",
+            "certificate_hash": "d9ba75a58448b48d4117462d6fce2a7afb1bfaa0"
+          }
+        },
+        {
+          "client_id": "874178996650-1q6ophjr9me0pvkdcdf2k26fr4kjhmbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKGi8OKpKBq4Nlkl9LTEC1_H_7EhTyXj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874178996650-1q6ophjr9me0pvkdcdf2k26fr4kjhmbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<resources>
+    <!--for mainly the mainActivity-->
+    <string name="app_name">Plannerr</string>
+    <string name="login">Login</string>
+    <string name="app_name_capital">PLANNER</string>
+    <string name="signup">Sign Up</string>
+    <string name="writeup_for_firstPage">Working Together Beautifully</string>
+    <string name="have_an_acct">Already have an account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="firstname">Firstname</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone No</string>
+    <string name="create_an_account">CREATE AN ACCOUNT</string>
+    <string name="signup_writeup">Get your team working together with just a few clicks.</string>
+    <string name="signin_writeup">Let\'s go back to work</string>
+    <string name="code">Enter Code</string>
+    <string name="confirmation_writeup">Please enter code sent to your inbox</string>
+    <string name="proceed">Proceed</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="username">Username</string>
+
+    <string-array name="category">
+        <item>Personal</item>
+        <item>Organisation</item>
+    </string-array>
+</resources>
