@@ -1,5 +1,6 @@
 package com.example.plannerr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -74,8 +75,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(response.code() == 200){
                     ResponseObject loginResponse = response.body();
+                    String token = loginResponse.getData().getToken();
 //                String loginMessage = response.body().getData().getUser().getName();
-                    Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, token, Toast.LENGTH_LONG).show();
+                    Intent dashboardIntent = new Intent(LoginActivity.this, Dashboard.class);
+                    dashboardIntent.putExtra("token", token);
+                    startActivity(dashboardIntent);
                     loginProgress.setVisibility(View.INVISIBLE);
                 }
             }
