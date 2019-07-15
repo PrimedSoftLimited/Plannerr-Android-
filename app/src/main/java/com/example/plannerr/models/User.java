@@ -1,13 +1,22 @@
 package com.example.plannerr.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
 
+    @SerializedName("name")
     private String name;
+    @SerializedName("email")
     private String email;
+    @SerializedName("phone_number")
     private String phone_number;
+    @SerializedName("user_image")
     private String user_image;
+    @SerializedName("updated_at")
     private String updated_at;
+    @SerializedName("created_at")
     private String created_at;
+    @SerializedName("id")
     private float id;
 
 

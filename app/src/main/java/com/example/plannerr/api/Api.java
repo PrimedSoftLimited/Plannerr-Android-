@@ -1,5 +1,6 @@
 package com.example.plannerr.api;
 
+import com.example.plannerr.models.Data;
 import com.example.plannerr.models.ResponseObject;
 
 import retrofit2.Call;
@@ -23,6 +24,13 @@ public interface Api {
     @FormUrlEncoded
     @POST("login")
     Call<ResponseObject> login(
+            @Field("email") String email,
+            @Field("password") String password
+    );
+
+    @FormUrlEncoded
+    @POST("create")
+    Call<ResponseObject> create(
             @Field("email") String email,
             @Field("password") String password
     );

@@ -29,9 +29,10 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="username">Username</string>
 
-    <string-array name="category">
-        <item>Personal</item>
-        <item>Organisation</item>
+    <string-array name="difficulty">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
     </string-array>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -57,5 +58,10 @@
     <string name="createGoals_writeup">Start achieving more through consistency and deligence</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
+    <string name="set_goals">SET GOALS</string>
+    <string name="goals_writeup">Journey of a thosand miles start with a step</string>
+    <string name="goal">Enter Goal</string>
+    <string name="startdate">Start Date</string>
+    <string name="endDate">End Date</string>
 
 </resources>

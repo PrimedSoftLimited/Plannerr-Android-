@@ -1,14 +1,23 @@
 package com.example.plannerr.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Data {
 
+    @SerializedName("success")
     private boolean success;
+    @SerializedName("message")
     private String message;
+    @SerializedName("user")
     User UserObject;
+    @SerializedName("image_link")
     private String image_link;
+    @SerializedName("email_link")
     private String email_link;
+    @SerializedName("token")
     private String token;
-
+    @SerializedName("goal")
+    Goal GoalObject;
 
     // Getter Methods
 
@@ -36,6 +45,10 @@ public class Data {
         return token;
     }
 
+    public Goal getGoal() {
+        return GoalObject;
+    }
+
     // Setter Methods
 
     public void setSuccess(boolean success) {
@@ -60,5 +73,9 @@ public class Data {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public void setGoal(Goal goalObject) {
+        this.GoalObject = goalObject;
     }
 }

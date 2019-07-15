@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:diagonal_angle="10"
+        app:diagonal_position="bottom"
+        app:diagonal_direction="right"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/solid_background"/>
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/splash_image"
+        android:elevation="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="180dp"/>
+
+
+</RelativeLayout>

@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.plannerr.api.RetrofitClient;
+import com.example.plannerr.models.Data;
 import com.example.plannerr.models.ResponseObject;
 
 import retrofit2.Call;
@@ -69,27 +70,29 @@ public class LoginActivity extends AppCompatActivity {
 
         loginProgress.setVisibility(View.VISIBLE);
         Call<ResponseObject> call = RetrofitClient.getInstance().getApi().login(email, password);
-        call.enqueue(new Callback<ResponseObject>() {
-            @Override
-            public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
-
-                if(response.code() == 200){
-                    ResponseObject loginResponse = response.body();
-                    String token = loginResponse.getData().getToken();
+       call.enqueue(new Callback<ResponseObject>() {
+           @Override
+           public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
+             if (response.code() == 200){
+                 ResponseObject loginResponse = response.body();
+                 String token = loginResponse.getData().getToken();
 //                String loginMessage = response.body().getData().getUser().getName();
-                    Toast.makeText(LoginActivity.this, token, Toast.LENGTH_LONG).show();
-                    Intent dashboardIntent = new Intent(LoginActivity.this, Dashboard.class);
-                    dashboardIntent.putExtra("token", token);
-                    startActivity(dashboardIntent);
-                    loginProgress.setVisibility(View.INVISIBLE);
-                }
-            }
+                 Toast.makeText(LoginActivity.this, token, Toast.LENGTH_LONG).show();
+                 Intent dashboardIntent = new Intent(LoginActivity.this, Dashboard.class);
+                 dashboardIntent.putExtra("token", token);
+                 startActivity(dashboardIntent);
+                 loginProgress.setVisibility(View.INVISIBLE);
+             } else {
+                 Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_LONG).show();
+                 loginProgress.setVisibility(View.INVISIBLE);
+             }
+           }
 
-            @Override
-            public void onFailure(Call<ResponseObject> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
-                loginProgress.setVisibility(View.INVISIBLE);
-            }
-        });
+           @Override
+           public void onFailure(Call<ResponseObject> call, Throwable t) {
+               Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+               loginProgress.setVisibility(View.INVISIBLE);
+           }
+       });
     }
 }

@@ -38,7 +38,7 @@ public class Dashboard extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        token = getIntent().getExtras().toString();
+        token = getIntent().getStringExtra("token");
         final Bundle tokenArgument = new Bundle();
         tokenArgument.putString("token", token);
 
@@ -96,7 +96,6 @@ public class Dashboard extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
